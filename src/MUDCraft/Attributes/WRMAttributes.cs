@@ -7,7 +7,7 @@
 
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Attributes
+namespace StarMUDium.Attributes
 {
     /// <summary>Warrior Attribute.</summary>
     [ExportGameAttribute(100)]

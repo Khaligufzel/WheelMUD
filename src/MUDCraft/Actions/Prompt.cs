@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using WheelMUD.Core;
 using WheelMUD.Server;
 
-namespace WarriorRogueMage.Actions
+namespace StarMUDium.Actions
 {
     /// <summary>An action to get or set your command prompt display.</summary>
     [CoreExports.GameAction(100)]

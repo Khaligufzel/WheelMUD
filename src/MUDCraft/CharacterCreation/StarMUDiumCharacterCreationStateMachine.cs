@@ -4,6 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 using System;
+using StarMUDium.CharacterCreation;
 using WheelMUD.ConnectionStates;
 using WheelMUD.Core;
 
@@ -62,9 +63,9 @@ namespace StarMUDium.CharacterCreation
             }
             else if (current is ConfirmPasswordState)
             {
-                return new PickGenderState(Session);
+                return new PickRaceState(Session);
             }
-            else if (current is PickGenderState)
+            else if (current is PickRaceState)
             {
                 return new GetDescriptionState(Session);
             }

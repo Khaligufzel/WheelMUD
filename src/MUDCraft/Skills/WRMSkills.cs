@@ -7,7 +7,7 @@
 
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Skills
+namespace StarMUDium.Skills
 {
     /// <summary>Acrobatics Skill.</summary>
     [ExportGameSkill]

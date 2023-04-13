@@ -7,7 +7,7 @@
 
 using WheelMUD.Core;
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     /// <summary>A "Warrior, Rogue, and Mage" statistic.</summary>
     public abstract class WRMStat : GameStat

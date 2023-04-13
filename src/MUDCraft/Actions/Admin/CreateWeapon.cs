@@ -6,7 +6,7 @@
 // -----------------------------------------------------------------------
 
 using System.Collections.Generic;
-using WarriorRogueMage.Behaviors;
+using StarMUDium.Behaviors;
 using WheelMUD.Core;
 
 namespace WheelMUD.Actions.Temporary

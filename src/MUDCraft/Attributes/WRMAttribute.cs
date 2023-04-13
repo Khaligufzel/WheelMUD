@@ -7,7 +7,7 @@
 
 using WheelMUD.Core;
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     /// <summary>The attribute that represents the Warrior, Rogue, and Mage player roles.</summary>
     public abstract class WRMAttribute : GameAttribute

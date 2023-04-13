@@ -12,7 +12,7 @@ using System.Linq;
 using WheelMUD.Core;
 using WheelMUD.Utilities.Interfaces;
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     /// <summary>Class to represent the basic Talent in the Warrior, Rogue, and Mage game system.</summary>
     public class Talent : IEquatable<Talent>, INamed

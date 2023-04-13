@@ -6,10 +6,10 @@
 //-----------------------------------------------------------------------------
 
 using System.Collections.Generic;
-using WarriorRogueMage.Behaviors;
+using StarMUDium.Behaviors;
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Actions
+namespace StarMUDium.Actions
 {
     /// <summary>An action to wield a weapon in your primary hand.</summary>
     [CoreExports.GameAction(100)]

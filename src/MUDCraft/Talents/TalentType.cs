@@ -5,7 +5,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     public enum TalentType
     {

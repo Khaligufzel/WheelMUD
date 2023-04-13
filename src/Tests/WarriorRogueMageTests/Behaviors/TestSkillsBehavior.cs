@@ -6,8 +6,8 @@
 //-----------------------------------------------------------------------------
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WarriorRogueMage.Behaviors;
-using WarriorRogueMage.Skills;
+using StarMUDium.Behaviors;
+using StarMUDium.Skills;
 using WheelMUD.Core;
 
 namespace WheelMUD.Tests.Behaviors

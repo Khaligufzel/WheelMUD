@@ -7,7 +7,7 @@
 
 // TODO: Implement modifiers. See: https://github.com/DavidRieman/WheelMUD/discussions/31 for starters.
 // TODO: Some of these need special behaviors or circumstances and need specific non-modifier code too.
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     /// <summary>Armored Caster Talent.</summary>
     [ExportTalent]

@@ -12,7 +12,7 @@ using WheelMUD.Core;
 using WheelMUD.Server;
 using WheelMUD.Utilities.Interfaces;
 
-namespace WarriorRogueMage.CharacterCreation
+namespace StarMUDium.CharacterCreation
 {
     /// <summary>Common methods for Warrior, Rogue, and Mage character creation.</summary>
     public class WrmChargenCommon

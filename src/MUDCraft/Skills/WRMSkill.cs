@@ -7,7 +7,7 @@
 
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Skills
+namespace StarMUDium.Skills
 {
     /// <summary>A WRM game skill.</summary>
     public class WRMSkill : GameSkill

@@ -10,7 +10,7 @@ using WheelMUD.ConnectionStates;
 using WheelMUD.Core;
 using WheelMUD.Server;
 
-namespace WarriorRogueMage.CharacterCreation
+namespace StarMUDium.CharacterCreation
 {
     /// <summary>Commands recognized by the Set Attributes character creation state.</summary>
     public enum SetAttributeCommand

@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using WheelMUD.Utilities;
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     [MetadataAttribute]
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]

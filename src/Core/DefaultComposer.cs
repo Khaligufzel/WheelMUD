@@ -40,7 +40,7 @@ namespace WheelMUD.Core
     /// To best support these goals, export attributes can implement IExportWithPriority and use DefaultComposer
     /// functions to compose those parts and systems. DefaultComposer will select one instance from each class
     /// name with the highest, non-zero "Priority" value. Core parts tend to export with priority 0, while any
-    /// sample game system parts (such as the default WarriorRogueMage sample implementation) use priority 100.
+    /// sample game system parts (such as the default StarMUDium sample implementation) use priority 100.
     /// You should pick a value like 200 for any parts you want to replace. For example, if you decided to fully
     /// replace how the "tell" action worked in your specific game, you could create a new class in your own
     /// game's library called "Tell" that inherits from GameAction with [CoreExports.GameAction(200)]. Your version

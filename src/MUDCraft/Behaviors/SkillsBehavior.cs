@@ -7,10 +7,10 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using WarriorRogueMage.Skills;
+using StarMUDium.Skills;
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Behaviors
+namespace StarMUDium.Behaviors
 {
     /// <summary>A behavior housing player skills functionality.</summary>
     public class SkillsBehavior : Behavior

@@ -8,7 +8,7 @@
 using WheelMUD.Actions;
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Creators
+namespace StarMUDium.Creators
 {
     [CreatorExports.Area(0)]
     public class StartingCityAreaCreator : CreatorDefinitions.Area

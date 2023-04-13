@@ -25,7 +25,7 @@ namespace StarMUDium
     [ExportGameRace]
     public class XorlanRace : StarMUDiumRace
     {
-        /// <summary>Initializes a new instance of the <see cref="ElfRace"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="XorlanRace"/> class.</summary>
         public XorlanRace() : base(
             "Xorlan",
             "The Xorlans are a race of humanoid aliens that have a translucent, jelly-like skin that is constantly changing colors. They communicate through a series of chirps and whistles that they make by vibrating the air inside their bodies. They are a highly empathic race and can sense the emotions of others through subtle vibrations in the air.")
@@ -37,7 +37,7 @@ namespace StarMUDium
     [ExportGameRace]
     public class QuentariRace : StarMUDiumRace
     {
-        /// <summary>Initializes a new instance of the <see cref="DwarfRace"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="QuentariRace"/> class.</summary>
         public QuentariRace() : base(
             "Quentari",
             "The Quentari are a race of humanoid aliens that have a highly developed sense of smell. Their nose is located in the center of their forehead, and they use it to navigate their surroundings and communicate with each other. They are a highly spiritual and philosophical race that values meditation and introspection.")
@@ -49,7 +49,7 @@ namespace StarMUDium
     [ExportGameRace]
     public class ValtorianRace : StarMUDiumRace
     {
-        /// <summary>Initializes a new instance of the <see cref="HalflingRace"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="ValtorianRace"/> class.</summary>
         public ValtorianRace() : base(
             "Valtorian",
             "The Valtorians are a race of humanoid aliens that have a metallic, reflective skin. They can manipulate the metal on their bodies, allowing them to change their shape and appearance at will. They are a highly adaptable and resourceful race, known for their ability to survive in even the harshest environments.")
@@ -61,7 +61,7 @@ namespace StarMUDium
     [ExportGameRace]
     public class ZalvanRace : StarMUDiumRace
     {
-        /// <summary>Initializes a new instance of the <see cref="LizardmanRace"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="ZalvanRace"/> class.</summary>
         public ZalvanRace() : base(
             "Zalvan",
             "The Zalvans are a race of humanoid aliens that have a symbiotic relationship with a small, insect-like creature that lives inside their bodies. The creature provides the Zalvans with heightened senses and enhanced reflexes, while the Zalvans provide the creature with a safe and nurturing environment. They are a fiercely loyal and protective race that values family above all else.")

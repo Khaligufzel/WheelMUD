@@ -7,7 +7,7 @@
 
 using WheelMUD.Core;
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     /// <summary>Neuter Gender.</summary>
     /// <remarks>

@@ -8,7 +8,7 @@
 using WheelMUD.Core;
 using WheelMUD.Server;
 
-namespace WarriorRogueMage.Behaviors
+namespace StarMUDium.Behaviors
 {
     /// <summary>Behavior which defines a Warrior Rogue and Mage player.</summary>
     public class WRMPlayerBehavior : PlayerBehavior

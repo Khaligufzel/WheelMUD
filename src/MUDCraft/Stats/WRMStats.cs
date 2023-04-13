@@ -7,7 +7,7 @@
 
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Stats
+namespace StarMUDium.Stats
 {
     /// <summary>Fate Stat.</summary>
     [ExportGameStat(100)]

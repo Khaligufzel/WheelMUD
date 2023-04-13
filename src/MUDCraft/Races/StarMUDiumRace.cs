@@ -5,8 +5,6 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
 using WheelMUD.Core;
 
 namespace StarMUDium
@@ -20,15 +18,11 @@ namespace StarMUDium
         /// <summary>Initializes a new instance of the <see cref="StarMUDiumRace"/> class.</summary>
         /// <param name="name">The name of the race.</param>
         /// <param name="description">The description of the race.</param>
-        /// <param name="racialTalents">The talents of the race.</param>
-        public StarMUDiumRace(string name, string description, params Talent[] racialTalents) : base()
+        public StarMUDiumRace(string name, string description) : base()
         {
             Name = name;
             Description = description;
-            RacialTalents = racialTalents.ToList();
         }
 
-        /// <summary>Gets the list of racial talents.</summary>
-        public List<Talent> RacialTalents { get; private set; }
     }
 }

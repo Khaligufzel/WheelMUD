@@ -8,7 +8,7 @@
 using System.Collections.Generic;
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Actions
+namespace StarMUDium.Actions
 {
     /// <summary>Initiates non-lethal combat.</summary>
     /// <remarks>TODO: Implement or retire? Doesn't seem to do anything right now...</remarks>

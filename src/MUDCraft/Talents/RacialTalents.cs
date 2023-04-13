@@ -5,7 +5,7 @@
 // </copyright>
 //-----------------------------------------------------------------------------
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     /// <summary>Beserker Talent.</summary>
     [ExportTalent]

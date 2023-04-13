@@ -8,7 +8,7 @@
 using System.Collections.Generic;
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Behaviors
+namespace StarMUDium.Behaviors
 {
     /// <summary>A <see cref="Thing"/> having WieldableBehavior can be wielded by a player or NPC.</summary>
     /// <remarks>

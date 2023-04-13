@@ -10,7 +10,7 @@ using WheelMUD.ConnectionStates;
 using WheelMUD.Core;
 using WheelMUD.Server;
 
-namespace WarriorRogueMage.CharacterCreation
+namespace StarMUDium.CharacterCreation
 {
     /// <summary>The character creation step where the player will pick their talents.</summary>
     public class PickTalentsState : CharacterCreationSubState

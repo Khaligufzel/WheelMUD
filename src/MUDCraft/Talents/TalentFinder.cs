@@ -11,7 +11,7 @@ using System.Linq;
 using WheelMUD.Core;
 using WheelMUD.Utilities.Interfaces;
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     public class TalentFinder : IRecomposable
     {

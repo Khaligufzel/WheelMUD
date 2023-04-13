@@ -12,7 +12,7 @@ using WheelMUD.Core;
 using WheelMUD.Interfaces;
 using WheelMUD.Utilities.Interfaces;
 
-namespace WarriorRogueMage
+namespace StarMUDium
 {
     /// <summary>Basic combat system for Warrior, Rogue, and Mage RPG system.</summary>
     public class WrmCombat : ISystem, ICombat

@@ -6,10 +6,10 @@
 //-----------------------------------------------------------------------------
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WarriorRogueMage;
-using WarriorRogueMage.Attributes;
-using WarriorRogueMage.Behaviors;
-using WarriorRogueMage.Stats;
+using StarMUDium;
+using StarMUDium.Attributes;
+using StarMUDium.Behaviors;
+using StarMUDium.Stats;
 using WheelMUD.Core;
 
 namespace WheelMUD.Tests.Behaviors

@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.Behaviors
+namespace StarMUDium.Behaviors
 {
     /// <summary>A behavior to house talents-related functionality.</summary>
     public class TalentsBehavior : Behavior
