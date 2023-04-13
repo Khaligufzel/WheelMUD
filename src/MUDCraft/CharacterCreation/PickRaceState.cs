@@ -41,12 +41,22 @@ namespace StarMUDium.CharacterCreation
         /// <param name="command">The command text to be processed.</param>
         public override void ProcessInput(string command)
         {
-            var currentCommand = command.ToLower().Trim();
+
+            var commandValue = command.ToLower().Split(' ').Skip(1).FirstOrDefault();
+
+            if (commandValue == null)
+            {
+                commandValue = " ";
+            }
+           
+
+
+            var currentCommand = Regex.Match(command.ToLower(), @"^([\w\-]+)").Value;
 
             switch (currentCommand)
             {
                 case "view":
-                    ViewRaceDescription(currentCommand);
+                    ViewRaceDescription(commandValue);
                     break;
                 case "list":
                     RefreshScreen();
@@ -187,7 +197,7 @@ namespace StarMUDium.CharacterCreation
             FormatRaceText(output);
             output.AppendSeparator('=', "yellow");
             output.AppendLine("To pick a race, just type the race's name. Example: human");
-            output.AppendLine("To view a races' description use the view command. Example: view orc");
+            output.AppendLine("To view a races' description use the view command. Example: view human");
             output.AppendLine("To see this screen again type 'list'.");
             output.AppendSeparator('=', "yellow");
             Session.Write(output);
