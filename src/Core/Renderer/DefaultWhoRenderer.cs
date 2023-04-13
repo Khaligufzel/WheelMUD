@@ -46,16 +46,16 @@ namespace WheelMUD.Core
             {
                 var playerName = player.Parent.Name;
                 var playerState = GetPlayerState(player);
-                if (terminalOptions.UseMXP)
-                {
-                    // TODO: "tell {0}" is not a good menu command; possibly friend add/remove, invite to group, hailing, and so on.
-                    // TODO: #107: Fix handling of MXP Secure Lines...  (This wasn't being built in a safe way, and does not render correctly now.)
-                    output.AppendLine($"<%mxpsecureline%><send \"finger {playerName}|tell {playerName}\" \"|finger|tell\">{playerName}</send> - {player.Parent.FullName} {playerState}");
-                }
-                else
-                {
-                    output.AppendLine($"{playerName} - {player.Parent.FullName} {playerState}");
-                }
+                //if (terminalOptions.UseMXP)
+                //{
+                //    // TODO: "tell {0}" is not a good menu command; possibly friend add/remove, invite to group, hailing, and so on.
+                //    // TODO: #107: Fix handling of MXP Secure Lines...  (This wasn't being built in a safe way, and does not render correctly now.)
+                //    output.AppendLine($"<%mxpsecureline%><send \"finger {playerName}|tell {playerName}\" \"|finger|tell\">{playerName}</send> - {player.Parent.FullName} {playerState}");
+                //}
+                //else
+                //{
+                    output.AppendLine($"{playerName} - {playerState}");
+                //}
             }
 
             output.AppendLine();

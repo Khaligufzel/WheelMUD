@@ -152,6 +152,8 @@ namespace WheelMUD.Core
         /// <summary>Gets or sets the description of this thing.</summary>
         public string Description { get; set; } = string.Empty;
 
+        public string Gender { get; set; } = string.Empty;
+
         /// <summary>Gets or sets the persistence IDs of all children of this Thing which allow persistence.</summary>
         /// <remarks>
         /// Primarily used for persistence to store and restore children without storing the whole sub-documents as

@@ -1,52 +1,45 @@
-﻿// <copyright file="WRMCharacterCreationStateMachine.cs" company="WheelMUD Development Team">
+﻿// <copyright file="MUDCraftCharacterCreationStateMachine.cs" company="WheelMUD Development Team">
 //   Copyright (c) WheelMUD Development Team.  See LICENSE.txt.  This file is
 //   subject to the Microsoft Public License.  All other rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------------
-
 using System;
 using WheelMUD.ConnectionStates;
 using WheelMUD.Core;
 
-namespace WarriorRogueMage.CharacterCreation
+namespace StarMUDium.CharacterCreation
 {
-    /// <summary>Warrior, Rogue, Mage state machine for creating a new character.</summary>
-    [ExportCharacterCreationStateMachine(50)]
-    public class WRMCharacterCreationStateMachine : CharacterCreationStateMachine
+    /// <summary>Default state machine for creating a new character.</summary>
+    [ExportCharacterCreationStateMachine(1000)]
+    public class StarMUDiumCharacterCreationStateMachine : CharacterCreationStateMachine
     {
-        /// <summary>Initializes a new instance of the <see cref="WRMCharacterCreationStateMachine" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="StarMUDiumCharacterCreationStateMachine"/> class.</summary>
         /// <param name="session">The session.</param>
-        public WRMCharacterCreationStateMachine(Session session)
+        public StarMUDiumCharacterCreationStateMachine(Session session)
             : base(session)
         {
         }
 
-        /// <summary>Initializes a new instance of the <see cref="WRMCharacterCreationStateMachine" /> class.</summary>
-        public WRMCharacterCreationStateMachine()
+        /// <summary>Initializes a new instance of the <see cref="StarMUDiumCharacterCreationStateMachine"/> class.</summary>
+        public StarMUDiumCharacterCreationStateMachine()
             : this(null)
         {
         }
 
         /// <summary>Gets the next step in the creation process.</summary>
-        /// <param name="current">The current (just executed step).</param>
-        /// <param name="previousStatus">Whether the current step passed or failed.</param>
-        /// <returns>The next step in the character creation process, or null if it is finished.</returns>
+        /// <param name="current">The current (just executed step)</param>
+        /// <param name="previousStatus">Whether the current step passed or failed</param>
+        /// <returns>The next step in the character creation process, or null if it is finished</returns>
         public override CharacterCreationSubState GetNextStep(CharacterCreationSubState current, StepStatus previousStatus)
         {
-            // entry point of the state machine
+            // If there is no state yet, set up the initial character creation state.
             if (current == null)
             {
                 return new ConfirmCreationEntryState(Session);
             }
 
-            if (previousStatus == StepStatus.Success)
-            {
-                return AdvanceState(current);
-            }
-            else
-            {
-                return RegressState(current);
-            }
+            // Otherwise either go forward to the next state, or back to the previous state if requested.
+            return previousStatus == StepStatus.Success ? AdvanceState(current) : RegressState(current);
         }
 
         private CharacterCreationSubState AdvanceState(CharacterCreationSubState current)
@@ -75,23 +68,8 @@ namespace WarriorRogueMage.CharacterCreation
             {
                 return new GetDescriptionState(Session);
             }
+
             else if (current is GetDescriptionState)
-            {
-                return new SetAttributesState(Session);
-            }
-            else if (current is SetAttributesState)
-            {
-                return new PickSkillsState(Session);
-            }
-            else if (current is PickSkillsState)
-            {
-                return new PickTalentsState(Session);
-            }
-            else if (current is PickTalentsState)
-            {
-                return new PickRaceState(Session);
-            }
-            else if (current is PickRaceState)
             {
                 // We are done with character creation!
                 return null;
