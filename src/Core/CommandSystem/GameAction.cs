@@ -39,7 +39,10 @@ namespace WheelMUD.Core
             RequiresAtLeastOneArgument,
 
             /// <summary>There must be at least two additional arguments.</summary>
-            RequiresAtLeastTwoArguments
+            RequiresAtLeastTwoArguments,
+
+            /// <summary>There must be at least three additional arguments.</summary>
+            RequiresAtLeastThreeArguments
         }
 
         /// <summary>Gets the best match for a Player or Mobile entity from the specified name.</summary>
@@ -95,6 +98,14 @@ namespace WheelMUD.Core
             {
                 return "This command can only be executed by a player with an active session.";
             }
+
+            // Rule: Is at least three arguments supplied?
+            if (guards.Contains(CommonGuards.RequiresAtLeastThreeArguments) && actionInput.Params.Length < 3)
+            {
+                return $"This command needs more than that. (Use 'help {actionInput.Noun}' for details.)";
+            }
+
+
 
             // Rule: Is at least two arguments supplied?
             if (guards.Contains(CommonGuards.RequiresAtLeastTwoArguments) && actionInput.Params.Length < 2)

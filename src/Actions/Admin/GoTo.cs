@@ -37,7 +37,7 @@ namespace WheelMUD.Actions
 
             // If input is a simple number, assume we mean a room
             // TODO: IMPROVE TARGETING!
-            var targetPlace = int.TryParse(actionInput.Tail, out var roomNum) ? ThingManager.Instance.FindThing("room/" + roomNum) : ThingManager.Instance.FindThingByName(actionInput.Tail, false, true);
+            var targetPlace = int.TryParse(actionInput.Tail, out var roomNum) ? ThingManager.Instance.FindThing("rooms/" + roomNum) : ThingManager.Instance.FindThingByName(actionInput.Tail, false, true);
 
             if (targetPlace == null)
             {
