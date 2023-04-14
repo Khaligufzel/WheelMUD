@@ -25,18 +25,16 @@ namespace StarMUDium.Actions.Admin
             var session = actionInput.Session;
             var actor = actionInput.Actor;
 
-            // Remove "weapon" from input tail and use the rest as the name.
-            //var tileName = actionInput.Tail[6..].Trim().ToLower();
 
             TileBehavior tileBehavior = new TileBehavior();
 
+
+            // TODO Check if input is valid
             tileBehavior.SetLocation(actionInput.Params[0], actionInput.Params[1].ToInt(), actionInput.Params[2].ToInt());
 
 
             var tile = new Thing(tileBehavior)
             {
-                //Name = weaponName,
-                //SingularPrefix = "a",
                 Id = "tiles/"+tileBehavior.fullLocation
 
             };
@@ -44,7 +42,10 @@ namespace StarMUDium.Actions.Admin
             session.WriteLine(tile.Id);
 
             tile.Save();
-            //PlacesManager.Instance.World.Add(tile);
+            if (PlacesManager.Instance.World.Add(tile))
+            {
+                PlacesManager.Instance.World.Save();
+            }
 
         }
 

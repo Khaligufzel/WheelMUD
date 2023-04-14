@@ -29,7 +29,13 @@ namespace StarMUDium.Actions.Admin
 
             var targetPlace = ThingManager.Instance.FindThing("tiles/" + actionInput.Params[0] + "/" + actionInput.Params[1] + "/" + actionInput.Params[2]);
 
+            //session.WriteLine("tiles/" + actionInput.Params[0] + "/" + actionInput.Params[1] + "/" + actionInput.Params[2]);
 
+            if (targetPlace == null)
+            {
+                session.WriteLine("Tile not found.");
+                return;
+            }
 
             var movableBehavior = actionInput.Actor.FindBehavior<MovableBehavior>();
 
@@ -55,13 +61,9 @@ namespace StarMUDium.Actions.Admin
 
             if (movableBehavior != null && movableBehavior.Move(targetPlace, actionInput.Actor, leaveMessage, arriveMessage))
             {
-
+                session.WriteLine("teleported to: "+targetPlace.Id);
             }
-                if (targetPlace == null)
-                {
-                    session.WriteLine("Tile or Entity not found.");
-                    return;
-                }
+
 
                 //if (targetPlace.FindBehavior<TileBehavior>() == null)
                 //{
