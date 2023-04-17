@@ -65,7 +65,10 @@ namespace StarMUDium.Actions.Travel
             coordY = tileBehavior.coordY;
             area = tileBehavior.areaName;
 
-            MoveThrough(actionInput);
+            if (MoveThrough(actionInput))
+            {
+                CommandManager.Instance.EnqueueAction(new ActionInput("look", actionInput.Session, actionInput.Actor));
+            }
 
         }
 
