@@ -36,13 +36,20 @@ namespace WheelMUD.Core
                     {
                         if(ThingManager.Instance.FindThing("tiles/" + tileBehavior.areaName + "/" + (tileBehavior.coordX - 5 + x) + "/" + (tileBehavior.coordY + 5 - y)) != null)
                         {
-                            //output.Append(tileBehavior.tileSymbol);
-                            output.Append(",");
+                            if (x == 5 && y == 5)
+                            {
+                                output.Append("&");
+                            }
+                            else
+                            {
+                                //output.Append(tileBehavior.tileSymbol);
+                                output.Append(tileBehavior.tileSymbol);
+                            }
                         }
 
                         else
                         {
-                            output.Append("x");
+                            output.Append(" ");
                         }
 
                         //output.Append("x");

@@ -38,7 +38,8 @@ namespace StarMUDium.Behaviors
         {
             Parent.Name = terrain.ToString();
             this.terrain = terrain;
-            SetUpSymbol(terrain);                                                                                                                                                                          
+            tileSymbol = SetUpSymbol(terrain);
+            
         }
 
         public void SetLocation(string areaName, int coordX, int coordY)
@@ -53,7 +54,7 @@ namespace StarMUDium.Behaviors
         {
             switch (terrain)
             {
-                case Terrain.Grass: return ",";
+                case Terrain.Grass: return "<%green%>,<%n%>";
                 case Terrain.Wall: return "#";
             }
 
