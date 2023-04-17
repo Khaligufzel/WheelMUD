@@ -9,14 +9,13 @@ using System.Collections.Generic;
 using WheelMUD.Core;
 using WheelMUD.Server;
 
-
 namespace WheelMUD.Actions
 {
     /// <summary>A command that allows a player to look at things and their environment.</summary>
-    [CoreExports.GameAction(0)]
+    [CoreExports.GameAction(200)]
     [ActionPrimaryAlias("look", CommandCategory.Inform)]
     [ActionAlias("l", CommandCategory.Inform)]
-    [ActionDescription("Look at the room, item, person, or monster.")]
+    [ActionDescription("Look at the tile, item, person, or monster.")]
     [ActionSecurity(SecurityRole.player)]
     public class Look : GameAction
     {

@@ -25,23 +25,26 @@ namespace StarMUDium.Actions.Admin
             var actor = actionInput.Actor;
 
 
-            for (int x = 0; x < 100; x++)
+            for (int x = 0; x < 20; x++)
             {
-                for (int y = 0; y < 100; y++)
+                for (int y = 0; y < 20; y++)
                 {
 
                     TileBehavior tileBehavior = new TileBehavior();
 
 
-                    // TODO Check if input is valid
-                    tileBehavior.SetLocation("testarea", x, y);
 
+                    tileBehavior.SetLocation("testarea", x, y);
 
                     var tile = new Thing(tileBehavior)
                     {
                         Id = "tiles/" + tileBehavior.fullLocation
 
                     };
+
+                    // TODO Check if input is valid
+
+                    tileBehavior.SetTerrain(TileBehavior.Terrain.Grass);
 
                     session.WriteLine(tile.Id);
 

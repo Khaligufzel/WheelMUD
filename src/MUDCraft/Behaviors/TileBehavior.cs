@@ -9,6 +9,7 @@ namespace StarMUDium.Behaviors
     {
         private readonly MoveFromTileBehaviorCommands commands;
 
+        public string tileSymbol { get; private set; }
         public int coordX { get; private set; }
         public int coordY { get; private set; }
         public string fullLocation { get; private set; }
@@ -24,12 +25,40 @@ namespace StarMUDium.Behaviors
             commands = new MoveFromTileBehaviorCommands(this);
         }
 
+        public enum Terrain
+        {
+            Grass,
+            Wall
+        }
+
+
+        public Terrain terrain { get; private set; }
+
+        public void SetTerrain(Terrain terrain)
+        {
+            Parent.Name = terrain.ToString();
+            this.terrain = terrain;
+            SetUpSymbol(terrain);                                                                                                                                                                          
+        }
+
         public void SetLocation(string areaName, int coordX, int coordY)
         {
             this.areaName = areaName;
             this.coordX = coordX;
             this.coordY = coordY;
             fullLocation = areaName + "/" + coordX + "/" + coordY;
+        }
+
+        private string SetUpSymbol(Terrain terrain)
+        {
+            switch (terrain)
+            {
+                case Terrain.Grass: return ",";
+                case Terrain.Wall: return "#";
+            }
+
+
+            return ".";
         }
 
 
